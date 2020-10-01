@@ -24,14 +24,15 @@ end
 
 #iterates through outter names key and category values hash
 hash_names.each do |names, hsubcat|
+  print names, hsubcat
   #category values hash and array values
   hsubcat.each do |subcat, array|
     data.each do |cgl, h_sub|
       h_sub.each do |value, array|
         array.each do |element|
       if element == names && subcat == cgl
-        hash_names[names][subcat] << value.to_s
-      end
+        hash_names[element][subcat] << value.to_s
+    end
     end
  end
 end
